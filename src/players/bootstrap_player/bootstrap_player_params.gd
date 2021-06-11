@@ -4,21 +4,22 @@ extends MovementParams
 
 func _init_params() -> void:
     name = "bootstrap_player"
-    player_resource_path = "res://src/players/bootstrap_player/bootstrap_player.tscn"
+    player_resource_path = \
+            "res://src/players/bootstrap_player/bootstrap_player.tscn"
     
     can_grab_walls = true
     can_grab_ceilings = false
     can_grab_floors = true
     
     var shape := CapsuleShape2D.new()
-    shape.radius = 30.0
-    shape.height = 54.0
+    shape.radius = 10.0
+    shape.height = 10.0
     collider_shape = shape
-    collider_rotation = PI / 2.0
+    collider_rotation = 0.0
     
     var fall_from_floor_shape := RectangleShape2D.new()
     fall_from_floor_shape.extents = \
-            Vector2(shape.radius + shape.height / 2.0, shape.radius)
+            Vector2(shape.radius, shape.radius + shape.height / 2.0)
     fall_from_floor_corner_calc_shape = fall_from_floor_shape
     fall_from_floor_corner_calc_shape_rotation = 0.0
     
@@ -29,9 +30,7 @@ func _init_params() -> void:
     slow_rise_gravity_multiplier = 0.38
     rise_double_jump_gravity_multiplier = 0.68
     
-    # TODO: Revert
     jump_boost = -1500.0
-#    jump_boost = -900.0
     in_air_horizontal_acceleration = 3200.0
     max_jump_chain = 2
     wall_jump_horizontal_boost = 400.0

@@ -127,16 +127,16 @@ var _colors_manifest := {
     
     # Should match Project Settings > Application > Boot Splash > Bg Color
     # Should match Project Settings > Rendering > Environment > Default Clear Color
-    background = Color("2c2c2c"),
+    background = Color("2c2c2f"),
     font = Color("eeeeee"),
     header_font = Color("eeeeee"),
     button = Color("777777"),
-    shiny_button_highlight = Color("dddddd"),
+    shiny_button_highlight = Color("18ffff"),
     button_disabled_hsv_delta = {h=0.0, s=-0.4, v=0.15, a=-0.2},
     button_focused_hsv_delta = {h=-0.03, s=-0.15, v=0.15},
     button_hover_hsv_delta = {h=-0.03, s=-0.15, v=0.15},
     button_pressed_hsv_delta = {h=0.05, s=-0.05, v=-0.1},
-    dropdown = Color("2c2c2c"),
+    dropdown = Color("2c2c2f"),
     tooltip = Color("080808"),
     tooltip_bg = Color("bbbbbb"),
     dropdown_disabled_hsv_delta = {h=0.0, s=-0.4, v=0.15, a=-0.2},

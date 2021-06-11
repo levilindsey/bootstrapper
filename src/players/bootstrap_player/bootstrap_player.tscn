@@ -4,8 +4,7 @@
 [ext_resource path="res://src/players/bootstrap_player/bootstrap_player_animator.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 30.0
-height = 54.0
+height = 10.0
 
 [node name="BootstrapPlayer" type="KinematicBody2D"]
 collision_layer = 0
@@ -15,7 +14,6 @@ script = ExtResource( 1 )
 [node name="BootstrapPlayerAnimator" parent="." instance=ExtResource( 2 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
