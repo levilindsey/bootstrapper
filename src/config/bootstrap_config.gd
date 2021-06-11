@@ -2,8 +2,8 @@ class_name GodotBootstrapConfig
 extends Node
 
 
-var _debug := OS.is_debug_build()
-#var _debug := false
+#var _debug := OS.is_debug_build()
+var _debug := false
 var _playtest := true
 #var _playtest := false
 var _uses_threads := true and OS.can_use_threads()
@@ -339,8 +339,9 @@ var app_manifest := {
     theme = preload("res://src/config/default_theme.tres"),
     
     screen_path_exclusions = [
-        "res://addons/scaffolder/src/gui/screens/rate_app_screen.tscn",
         "res://addons/scaffolder/src/gui/screens/confirm_data_deletion_screen.tscn",
+        "res://addons/scaffolder/src/gui/screens/data_agreement_screen.tscn",
+        "res://addons/scaffolder/src/gui/screens/rate_app_screen.tscn",
     ],
     screen_path_inclusions = [],
     settings_main_item_class_exclusions = [],
@@ -383,7 +384,7 @@ var app_manifest := {
     pause_menu_music = "pause_menu",
     default_level_music = "on_a_quest",
     godot_splash_sound = "achievement",
-    developer_splash_sound = "single_cat_snore",
+    developer_splash_sound = "",
     level_end_sound = "cadence",
     
     third_party_license_text = \
@@ -401,7 +402,7 @@ var app_manifest := {
     developer_url = "https://levi.dev",
     
     developer_logo = preload("res://assets/images/gui/levi_logo_about.png"),
-    developer_splash = preload("res://assets/images/gui/levi_logo_splash.png"),
+    developer_splash = null,
     
     godot_splash_screen_duration = 0.8,
     developer_splash_screen_duration = 1.0,

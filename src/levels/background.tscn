@@ -7,10 +7,9 @@
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 light_mask = 8
 motion_scale = Vector2( 0.5, 0.5 )
-motion_mirroring = Vector2( 512, 512 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer"]
 light_mask = 8
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 2048, 2048 )
+region_rect = Rect2( 0, 0, 4096, 4096 )
