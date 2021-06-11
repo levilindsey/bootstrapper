@@ -1,4 +1,4 @@
-class_name Config
+class_name GodotBootstrapConfig
 extends Node
 
 
@@ -127,16 +127,16 @@ var _colors_manifest := {
     
     # Should match Project Settings > Application > Boot Splash > Bg Color
     # Should match Project Settings > Rendering > Environment > Default Clear Color
-    background = Color("473d2d"),
+    background = Color("2c2c2c"),
     font = Color("eeeeee"),
     header_font = Color("eeeeee"),
-    button = Color("3e7025"),
-    shiny_button_highlight = Color("72d113"),
+    button = Color("777777"),
+    shiny_button_highlight = Color("dddddd"),
     button_disabled_hsv_delta = {h=0.0, s=-0.4, v=0.15, a=-0.2},
     button_focused_hsv_delta = {h=-0.03, s=-0.15, v=0.15},
     button_hover_hsv_delta = {h=-0.03, s=-0.15, v=0.15},
     button_pressed_hsv_delta = {h=0.05, s=-0.05, v=-0.1},
-    dropdown = Color("473d2d"),
+    dropdown = Color("2c2c2c"),
     tooltip = Color("080808"),
     tooltip_bg = Color("bbbbbb"),
     dropdown_disabled_hsv_delta = {h=0.0, s=-0.4, v=0.15, a=-0.2},
@@ -325,7 +325,7 @@ var app_manifest := {
     data_agreement_version = "0.0.1",
     
     # Must start with "UA-".
-    google_analytics_id = "UA-TODO",
+    google_analytics_id = "",
     privacy_policy_url = "",
     terms_and_conditions_url = "",
     android_app_store_url = "",

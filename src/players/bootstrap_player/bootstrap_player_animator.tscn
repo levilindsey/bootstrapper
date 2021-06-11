@@ -1,1 +1,178 @@
 [gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/players/bootstrap_player/bootstrap_player_animator.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/players/player_spritesheet.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "ClimbDown"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ClimbDown:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "ClimbUp"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ClimbUp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "JumpFall"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("JumpFall:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "JumpRise"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("JumpRise:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Rest"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rest:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RestOnWall:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Walk:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[node name="BootstrapPlayerAnimator" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Walk" type="Sprite" parent="."]
+visible = false
+light_mask = 2
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="ClimbUp" type="Sprite" parent="."]
+visible = false
+light_mask = 2
+rotation = -1.5708
+texture = ExtResource( 2 )
+hframes = 4
+frame = 1
+
+[node name="ClimbDown" type="Sprite" parent="."]
+visible = false
+light_mask = 2
+rotation = -1.5708
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="Rest" type="Sprite" parent="."]
+light_mask = 2
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="RestOnWall" type="Sprite" parent="."]
+visible = false
+light_mask = 2
+rotation = -1.5708
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="JumpFall" type="Sprite" parent="."]
+visible = false
+light_mask = 2
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="JumpRise" type="Sprite" parent="."]
+visible = false
+light_mask = 2
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ClimbDown = SubResource( 1 )
+anims/ClimbUp = SubResource( 2 )
+anims/JumpFall = SubResource( 3 )
+anims/JumpRise = SubResource( 4 )
+anims/Rest = SubResource( 5 )
+anims/RestOnWall = SubResource( 6 )
+anims/Walk = SubResource( 7 )
