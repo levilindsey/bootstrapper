@@ -27,6 +27,6 @@ TODO: Search/replace all instances of bootstrap with the app name.
     -   [src/config/third_party_licenses.gd](./src/config/third_party_licenses.gd)
 
 <p align="center">
-  <img src="assets/images/loading.gif"
+  <img src="assets/images/gui/loading.gif"
        alt="An animated GIF.">
 </p>
