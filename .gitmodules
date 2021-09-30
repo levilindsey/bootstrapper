@@ -6,3 +6,7 @@
 	path = addons/surfacer
 	url = https://github.com/SnoringCatGames/surfacer.git
 	update = merge
+[submodule "addons/squirrel_away"]
+	path = addons/squirrel_away
+	url = https://github.com/SnoringCatGames/squirrel_away.git
+	update = merge

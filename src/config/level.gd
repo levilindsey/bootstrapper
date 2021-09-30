@@ -3,20 +3,16 @@ class_name Level
 extends SurfacerLevel
 
 
-# func _enter_tree() -> void:
-#     pass
-
-
 #func _load() -> void:
 #    ._load()
 
 
-# func _start() -> void:
-#     ._start()
+#func _start() -> void:
+#    ._start()
 
 
-# func _destroy() -> void:
-#     ._destroy()
+#func _destroy() -> void:
+#    ._destroy()
 
 
 #func _on_initial_input() -> void:
@@ -31,10 +27,20 @@ extends SurfacerLevel
 #    ._on_intro_choreography_finished()
 
 
+#func pause() -> void:
+#    .pause()
+
+
+#func on_unpause() -> void:
+#    .on_unpause()
+
+
 func get_music_name() -> String:
+    # FIXME: BOOTSTRAP: -------------------
     return "on_a_quest"
 
 
 func get_slow_motion_music_name() -> String:
+    # FIXME: BOOTSTRAP: -------------------
     # FIXME: Add slo-mo music
     return ""
