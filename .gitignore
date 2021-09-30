@@ -76,6 +76,7 @@ Thumbs.db
 
 # Releases that shouldn't be included in the repo
 *.apk
+*.apk.idsig
 
 # App-release secrets
 secret/
