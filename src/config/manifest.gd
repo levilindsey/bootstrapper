@@ -263,7 +263,7 @@ var _audio_manifest := {
     
     pauses_level_music_on_pause = true,
     
-    are_beats_tracked_by_default = true,
+    are_beats_tracked_by_default = false,
     
     is_arbitrary_music_speed_change_supported = true,
     is_music_speed_scaled_with_time_scale = true,
