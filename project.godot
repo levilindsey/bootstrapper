@@ -279,6 +279,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/levels/collidable_tile_map.gd"
 }, {
+"base": "TileSet",
+"class": "CollidableTileSetOverrides",
+"language": "GDScript",
+"path": "res://src/levels/collidable_tile_set_overrides.gd"
+}, {
 "base": "Behavior",
 "class": "CollideBehavior",
 "language": "GDScript",
@@ -2109,6 +2114,7 @@ _global_script_class_icons={
 "ClimbToAdjacentSurfaceCalculator": "",
 "ClimbToAdjacentSurfaceEdge": "",
 "CollidableTileMap": "",
+"CollidableTileSetOverrides": "",
 "CollideBehavior": "res://addons/surfacer/assets/images/editor_icons/collide_behavior.png",
 "CollisionCalcParams": "",
 "CollisionCalcResultMetadata": "",
