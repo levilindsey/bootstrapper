@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://addons/scaffolder/src/character/scaffolder_character_animator.gd" type="Script" id=1]
+[ext_resource path="res://addons/surfacer/src/character/surfacer_character_animator.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/characters/test_character_running.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/characters/test_character_climbing_up.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/characters/test_character_climbing_down.png" type="Texture" id=4]
@@ -288,12 +288,12 @@ __meta__ = {
 animations = {
 "ClimbDown": {
 "name": "ClimbDown",
-"speed": 2.5,
+"speed": 1.0,
 "sprite_name": "ClimbDown"
 },
 "ClimbUp": {
 "name": "ClimbUp",
-"speed": 2.5,
+"speed": 1.0,
 "sprite_name": "ClimbUp"
 },
 "CrawlOnCeiling": {
@@ -333,7 +333,7 @@ animations = {
 },
 "Walk": {
 "name": "Walk",
-"speed": 2.5,
+"speed": 1.0,
 "sprite_name": "Walk"
 }
 }

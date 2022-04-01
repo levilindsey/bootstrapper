@@ -66,11 +66,21 @@ var _music_manifest := [
 ]
 
 var _sounds_manifest := [
-    # {
-    #     name = "my_sound",
-    #     volume_db = 0.0,
-    #     path_prefix = "res://assets/sounds/",
-    # },
+    {
+        name = "test_character_jump",
+        volume_db = 0.0,
+        path_prefix = "",
+    },
+    {
+        name = "test_character_land",
+        volume_db = 0.0,
+        path_prefix = "",
+    },
+    {
+        name = "test_character_hit_surface",
+        volume_db = 0.0,
+        path_prefix = "",
+    },
 ]
 
 var _audio_manifest := {

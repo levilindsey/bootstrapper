@@ -914,6 +914,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/global/game_global.gd"
 }, {
+"base": "SurfacerLevel",
+"class": "GameLevel",
+"language": "GDScript",
+"path": "res://src/levels/game_level.gd"
+}, {
 "base": "FrameworkMetadata",
 "class": "GameMetadata",
 "language": "GDScript",
@@ -2756,6 +2761,7 @@ _global_script_class_icons={
 "GameDefaultAnnotationParameters": "",
 "GameDefaultColors": "",
 "GameInterface": "",
+"GameLevel": "",
 "GameMetadata": "",
 "GameOverScreen": "",
 "GamePlugin": "",
