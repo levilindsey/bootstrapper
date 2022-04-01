@@ -300,6 +300,7 @@ var _additive_overrides := {
                 GameDefaultColors.new())),
     },
     SurfaceTilerSchema: {
+        includes_intra_subtile_45_concave_cusps = false,
         tilesets = [
             {
                 recalculate_tileset = [TYPE_CUSTOM, RecalculateTilesetCustomProperty],

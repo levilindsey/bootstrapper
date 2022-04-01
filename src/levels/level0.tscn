@@ -16,6 +16,7 @@ level_id = "0"
 
 [node name="CollidableTilemap" parent="." groups=["surfaces"] instance=ExtResource( 2 )]
 tile_data = PoolIntArray( 131071, 0, 0, 196606, 2, 0, 196607, 2, 0, 131072, 2, 0, 131073, 2, 0, 262142, 3, 0, 262143, 2, 0, 196608, 2, 0, 196609, 3, 0 )
+logs_autotiling_state_for_selected_tile = true
 id = "0"
 
 [node name="InnerTilemap" type="TileMap" parent="CollidableTilemap" groups=["surfaces"]]
