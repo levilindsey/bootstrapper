@@ -256,6 +256,7 @@ var _gui_manifest := {
 
 var _character_scenes := [
     preload("res://src/characters/test_character/test_character.tscn"),
+    preload("res://src/characters/test_character2/test_character2.tscn"),
 ]
 
 var _character_categories := [

@@ -2359,6 +2359,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/characters/test_character/test_character.gd"
 }, {
+"base": "SurfacerCharacter",
+"class": "TestCharacter2",
+"language": "GDScript",
+"path": "res://src/characters/test_character2/test_character2.gd"
+}, {
 "base": "SurfacesTilemap",
 "class": "TestOddShapesTilemap",
 "language": "GDScript",
@@ -3040,6 +3045,7 @@ _global_script_class_icons={
 "SurfacesTileset": "",
 "SurfacesTilesetInitializer": "",
 "TestCharacter": "",
+"TestCharacter2": "",
 "TestOddShapesTilemap": "",
 "TestOddShapesTileset": "",
 "TextControlRow": "",

@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/squirrel_away/src/config/squirrel_away_level.gd" type="Script" id=1]
 [ext_resource path="res://src/tiles/collidable_tilemap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/squirrel_away/src/gui/background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/surfacer/src/character/surfacer_spawn_position.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/surfacer/src/tiles/surface_enablement.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/tiles/collidable_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://addons/surface_tiler/src/corner_match_inner_tilemap.gd" type="Script" id=7]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,9 +16,17 @@ level_id = "0"
 
 [node name="CollidableTilemap" parent="." groups=["surfaces"] instance=ExtResource( 2 )]
 
+[node name="InnerTilemap" type="TileMap" parent="CollidableTilemap" groups=["surfaces"]]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+format = 1
+script = ExtResource( 7 )
+id = "_inner"
+
 [node name="IntroChoreographyDestination" type="Position2D" parent="." groups=["intro_choreography_destination"]]
 
 [node name="SurfacerSpawnPosition" parent="." instance=ExtResource( 4 )]
+character_name = "test_character"
 
 [node name="SurfaceEnablement" parent="." instance=ExtResource( 5 )]
 modulate = Color( 0, 1, 0.0999999, 0.7 )
