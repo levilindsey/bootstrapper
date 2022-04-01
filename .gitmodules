@@ -10,3 +10,6 @@
 	path = addons/squirrel_away
 	url = https://github.com/SnoringCatGames/squirrel_away.git
 	update = merge
+[submodule "addons/surface_tiler"]
+	path = addons/surface_tiler
+	url = https://github.com/SnoringCatGames/surface_tiler.git

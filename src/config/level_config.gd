@@ -15,9 +15,10 @@ var level_manifest := {
         sort_priority = -100,
         unlock_conditions = "unlocked",
         scene_path = LEVELS_PATH_PREFIX + "level0.tscn",
-        platform_graph_character_names = [
+        platform_graph_character_category_names = [
             "test_character",
         ],
+        cell_size = Vector2(32.0, 32.0),
     },
 #    "1": {
 #        name = "Foo",
@@ -26,9 +27,10 @@ var level_manifest := {
 #        sort_priority = 10,
 #        unlock_conditions = "unlocked",
 #        scene_path = LEVELS_PATH_PREFIX + "level1.tscn",
-#        platform_graph_character_names = [
+#        platform_graph_character_category_names = [
 #            "test_character",
 #        ],
+#        cell_size = Vector2(32.0, 32.0),
 #        intro_choreography = [
 #            {
 #                is_player_interaction_enabled = false,
@@ -57,9 +59,10 @@ var level_manifest := {
 #        sort_priority = 20,
 #        unlock_conditions = "finish_previous_level",
 #        scene_path = LEVELS_PATH_PREFIX + "level2.tscn",
-#        platform_graph_character_names = [
+#        platform_graph_character_category_names = [
 #            "test_character",
 #        ],
+#        cell_size = Vector2(32.0, 32.0),
 #    },
 }
 

@@ -1,9 +1,9 @@
 tool
-class_name CollidableTileMap
-extends SurfacesTileMap
+class_name CollidableTilemap
+extends SurfacesTilemap
 
 
-const DEFAULT_TILE_SET := preload("res://src/levels/collidable_tile_set.tres")
+const DEFAULT_TILE_SET := preload("res://src/tiles/collidable_tileset.tres")
 
 
 func _ready() -> void:

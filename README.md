@@ -1,8 +1,8 @@
-# Ludum Dare 49
+# Ludum Dare 50
 
 > TODO: Add a cover image.
 
-> _**[Play the game!](https://levi.dev/ludum-dare-49)**_
+> _**[Play the game!](https://levi.dev/ludum-dare-50)**_
 
 _TODO: Game plot description / call-to-action_
 
@@ -10,7 +10,7 @@ TODO: Game technical description
 
 TODO: Search/replace all instances of bootstrap with the app name.
 
-## The jam
+## 👨‍💻 The jam
 
 Ludum Dare is a semi-annual event where people create a game over the weekend. Ludum Dare is a ranked competition, with a clever voting system that gets more eyes on your game when you in turn rate other games. There are two tracks you can participate in:
 
@@ -21,27 +21,28 @@ Additionally, the games all follow some central theme, which is only announced a
 
 I worked solo and created everything during the event. Except of course for my Scaffolder and Surfacer frameworks (which is fine, you're allowed to use pre-existing code).
 
-### The theme
+### 💡 The theme
 
 > TODO: Describe the theme and how my game fits it.
 
-## Software used
+## 💿 Software used
 
--   [Godot](https://godotengine.org/): Game engine.
--   [Piskel](https://www.piskelapp.com/user/5663844106502144): Pixel-art image editor.
--   [Aseprite](https://www.aseprite.org/): Pixel-art image editor.
--   [Bfxr](https://www.bfxr.net/): Sound effects editor.
--   [DefleMask](https://deflemask.com/): Chiptune music tracker.
--   [Surfacer](https://github.com/SnoringCatGames/surfacer/): A framework that enables procedural path-finding across 2D platforms.
--   [Scaffolder](https://github.com/SnoringCatGames/scaffolder/): A framework that provides some general app infrastructure.
+-   **[Godot](https://godotengine.org/):** Game engine.
+-   **[Piskel](https://www.piskelapp.com/user/5663844106502144):** Pixel-art image editor.
+-   **[Aseprite](https://www.aseprite.org/):** Pixel-art image editor.
+-   **[Bfxr](https://www.bfxr.net/):** Sound effects editor.
+-   **[DefleMask](https://deflemask.com/):** Chiptune music tracker.
+-   **[Surfacer](https://godotengine.org/asset-library/asset/968):** Framework for procedural path-finding across 2D platforms.
+-   **[Scaffolder](https://godotengine.org/asset-library/asset/969):** Framework for general app and UI infrastructure.
+-   **[SurfaceTiler](https://github.com/SnoringCatGames/surface_tiler):** Framework for "next-level" autotiling.
 
-## Getting set up
+## ⚙️ Getting set up
 
 > **NOTE:** This repo uses [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to include frameworks.
 
 To learn more about how the code works, checkout the [Surfacer](https://github.com/SnoringCatGames/surfacer/) and [Scaffolder](https://github.com/SnoringCatGames/scaffolder/) READMEs.
 
-## Licenses
+## 📃 Licenses
 
 -   All code is published under the [MIT license](LICENSE).
 -   All art assets (files under `assets/images/`, `assets/music/`, and `assets/sounds/`) are published under the [CC0 1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
