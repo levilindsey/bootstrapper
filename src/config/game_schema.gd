@@ -80,7 +80,7 @@ var _audio_manifest := {
     default_sounds_bus_index = 1,
     
     music_manifest = _music_manifest,
-    default_music_path_prefix = "res:/assets/music/",
+    default_music_path_prefix = "res://assets/music/",
     default_music_file_suffix = ".ogg",
     default_music_bus_index = 2,
     
@@ -299,9 +299,9 @@ var _additive_overrides := {
                         outer_autotile_name = "autotile",
                         inner_autotile_name = "__inner_autotile__",
                         tileset_quadrants_path = \
-                            "res:/assets/images/tiles/tileset_quadrants.png",
+                            "res://assets/images/tiles/tileset_quadrants.png",
                         tile_corner_type_annotations_path = \
-                            "res:/assets/images/tiles/tileset_corner_type_annotations.png",
+                            "res://assets/images/tiles/tileset_corner_type_annotations.png",
                         subtile_collision_margin = 0.0,
                         are_45_degree_subtiles_used = true,
                         are_27_degree_subtiles_used = false,
@@ -311,7 +311,7 @@ var _additive_overrides := {
                 ],
                 non_corner_match_tiles = [
                     {
-                        name = "decoration",
+                        name = "decorations",
                         properties = "",
                         is_collidable = false,
                     },

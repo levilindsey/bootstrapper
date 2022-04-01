@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/images/tiles/decorative_tileset.png" type="Texture" id=2]
 
 [resource]
-0/name = "decorative_tileset"
+0/name = "decorations"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
