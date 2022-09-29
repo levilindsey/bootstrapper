@@ -6,7 +6,7 @@ extends FrameworkSchema
 const _METADATA_SCRIPT := GameMetadata
 
 var _metadata := {
-    pauses_on_focus_out = true,
+    pauses_on_focus_out = false, # FIXME: ----------
     also_prints_to_stdout = true,
     logs_character_events = true,
     logs_analytics_events = true,
@@ -14,24 +14,24 @@ var _metadata := {
     logs_device_settings = true,
     logs_in_editor_events = true,
     is_profiler_enabled = true,
-    are_all_levels_unlocked = true,
-    are_test_levels_included = true,
-    is_save_state_cleared_for_debugging = false,
-    opens_directly_to_level_id = "",
-    is_splash_skipped = false,
+    are_all_levels_unlocked = true, # FIXME: ----------
+    are_test_levels_included = true, # FIXME: ----------
+    is_save_state_cleared_for_debugging = false, # FIXME: ----------
+    opens_directly_to_level_id = "", # FIXME: ----------
+    is_splash_skipped = false, # FIXME: ----------
     uses_threads = false,
     thread_count = 1,
     rng_seed = 176,
     is_mobile_supported = true,
-    uses_level_scores = false,
+    uses_level_scores = true,
     must_restart_level_to_change_settings = true,
     overrides_project_settings = true,
     overrides_input_map = true,
     are_button_controls_enabled_by_default = false,
     base_path = "",
     
-    app_name = "Bootstrapper",
-    app_id = "dev.levi.bootstrapper",
+    app_name = "Ludum Dare 51",
+    app_id = "dev.levi.ludum_dare_51",
     app_version = "0.0.1",
     score_version = "0.0.1",
     data_agreement_version = "0.0.1",
@@ -49,15 +49,26 @@ var _metadata := {
     
     developer_name = "Levi Lindsey",
     developer_url = "https://levi.dev",
-    github_url = "https://github.com/levilindsey/ludum-dare-50",
+    github_url = "https://github.com/levilindsey/ludum-dare-51",
     
     godot_splash_screen_duration = 0.8,
     developer_splash_screen_duration = 1.0,
 }
 
+# FIXME: ----------
 var _music_manifest := [
+    # NOTE:
+    # -   I'm hacking this a bit.
+    # -   BPMs are used as a seconds tracker, and aren't actually accurate.
     # {
     #     name = "my_music",
+    #     path_prefix = "res://assets/music/",
+    #     volume_db = 0.0,
+    #     bpm = 75.0,
+    #     meter = 4,
+    # },
+    # {
+    #     name = "my_pause_music",
     #     path_prefix = "res://assets/music/",
     #     volume_db = 0.0,
     #     bpm = 75.0,
@@ -108,12 +119,12 @@ var _audio_manifest := {
     
     are_beats_tracked_by_default = true,
     
-    is_arbitrary_music_speed_change_supported = true,
-    is_music_speed_scaled_with_time_scale = true,
-    is_music_speed_scaled_with_additional_debug_time_scale = true,
+    is_arbitrary_music_speed_change_supported = false,
+    is_music_speed_scaled_with_time_scale = false,
+    is_music_speed_scaled_with_additional_debug_time_scale = false,
     
-    is_music_paused_in_slow_motion = true,
-    is_tick_tock_played_in_slow_motion = true,
+    is_music_paused_in_slow_motion = false,
+    is_tick_tock_played_in_slow_motion = false,
     is_slow_motion_start_stop_sound_effect_played = true,
 }
 
@@ -160,8 +171,7 @@ var _images_manifest_pixelated := {
     slider_tick_sizes = \
             ScaffolderImages.DEFAULT_SLIDER_TICK_PIXEL_SIZES,
     
-    app_logo = preload(
-            "res://addons/scaffolder/assets/images/logos/scaffolder_logo.png"),
+    app_logo = preload("res://assets/images/logos/logo.png"),
     app_logo_scale = 1.0,
     
     developer_logo = preload(
@@ -169,8 +179,7 @@ var _images_manifest_pixelated := {
     developer_splash = preload(
             "res://addons/scaffolder/assets/images/logos/snoring_cat_logo_splash.png"),
     
-    go_normal = preload(
-            "res://addons/scaffolder/assets/images/gui/icons/go_normal.png"),
+    go_normal = preload("res://assets/images/gui/go_icon.png"),
     go_scale = 1.5,
     
     about_circle_pressed = preload(
@@ -224,12 +233,61 @@ var _images_manifest_pixelated := {
             preload("res://addons/scaffolder/assets/images/gui/icons/stop_normal.png"),
 }
 
+var _styles_manifest_pixelated := {
+    focus_border_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/focus_border.png"),
+    button_pressed_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/button_pressed.png"),
+    button_disabled_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/button_hover.png"),
+    button_hover_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/button_hover.png"),
+    button_normal_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/button_normal.png"),
+    dropdown_pressed_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/dropdown_pressed.png"),
+    dropdown_disabled_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/dropdown_hover.png"),
+    dropdown_hover_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/dropdown_hover.png"),
+    dropdown_normal_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/dropdown_normal.png"),
+    scroll_track_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/scroll_track.png"),
+    scroll_grabber_pressed_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/scroll_grabber_pressed.png"),
+    scroll_grabber_hover_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/scroll_grabber_hover.png"),
+    scroll_grabber_normal_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/scroll_grabber_normal.png"),
+    slider_track_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/slider_track.png"),
+    overlay_panel_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/overlay_panel.png"),
+#    notification_panel_nine_patch = \
+#            preload("res://assets/images/gui/nine_patch/notification_panel.png"),
+    hud_panel_nine_patch = \
+            preload("res://assets/images/gui/nine_patch/hud_panel.png"),
+}
+
 var _gui_manifest := {
     third_party_license_text = \
             ThirdPartyLicenses.TEXT + \
             SurfaceTilerThirdPartyLicenses.TEXT + \
             ScaffolderThirdPartyLicenses.TEXT + \
             SurfacerThirdPartyLicenses.TEXT,
+    
+    main_menu_image_scale = 1.0,
+    game_over_image_scale = 0.5,
+    loading_image_scale = 0.5,
+    
+    display_time_type = TimeType.PLAY_PHYSICS_SCALED,
+    
+    welcome_panel_scene = [TYPE_PACKED_SCENE, null],
+    main_menu_image_scene = preload("res://src/gui/loading_image.tscn"),
+    game_over_image_scene = preload("res://src/gui/loading_image.tscn"),
+    loading_image_scene = preload("res://src/gui/loading_image.tscn"),
+    
     settings_item_manifest = {
         groups = {
             annotations = {
@@ -246,20 +304,55 @@ var _gui_manifest := {
             },
         },
     },
+    # FIXME: ----------
+    pause_item_manifest = [
+        TimeControlRow,
+        LevelControlRow,
+#        FastestTimeControlRow,
+#        LongestTimeControlRow,
+#        ScoreControlRow,
+#        HighScoreControlRow,
+    ],
+    game_over_item_manifest = [
+#        FastestTimeControlRow,
+#        LongestTimeControlRow,
+        TimeControlRow,
+        LevelControlRow,
+    ],
+    level_select_item_manifest = [
+        TotalPlaysControlRow,
+#        FastestTimeControlRow,
+#        LongestTimeControlRow,
+    ],
     hud_manifest = {
-        hud_key_value_box_size = Vector2(256.0, 48.0),
+        hud_class = Hud,
+        hud_key_value_box_size = Vector2(200.0, 64.0),
         hud_key_value_list_item_manifest = [
+            {
+                item_class = TimeControlRow,
+                settings_enablement_label = "Time",
+                enabled_by_default = false,
+                settings_group_key = "hud",
+            },
         ],
         is_hud_visible_by_default = true,
         is_inspector_enabled_default = false,
         inspector_panel_starts_open = false,
+        is_key_value_list_consolidated = true,
     },
     welcome_panel_manifest = {
+        # FIXME: -------------
         items = [
+#            ["Select bot", "Hold Q/W/E/A/S/D"],
+#            ["Move bot", "L-click on platform"],
+#            ["CommandType bot", "L-click on button"],
+#            ["Cancel command", "R-click"],
+            ["Zoom in/out", "Scroll-wheel"],
         ],
     },
     screen_manifest = {
         screens = [
+            preload("res://src/gui/ld_loading_screen.tscn"),
         ],
     },
 }
@@ -273,10 +366,20 @@ var _character_categories := [
 ]
 
 var _character_manifest := {
-    default_character_name = "test_character",
+    default_player_character_name = "test_character",
     character_scenes = _character_scenes,
     character_categories = _character_categories,
     omits_npcs = false,
+    can_include_player_characters = true,
+}
+
+var _level_manifest := {
+    level_config_class = LevelConfig,
+    level_session_class = LevelSession,
+    default_camera_bounds_level_margin = \
+        ScaffolderLevelConfig.DEFAULT_CAMERA_BOUNDS_LEVEL_MARGIN,
+    default_character_bounds_level_margin = \
+        ScaffolderLevelConfig.DEFAULT_CHARACTER_BOUNDS_LEVEL_MARGIN,
 }
 
 var _properties := {
@@ -287,10 +390,10 @@ var _additive_overrides := {
         metadata = _metadata,
         audio_manifest = _audio_manifest,
         images_manifest_pixelated = _images_manifest_pixelated,
+        styles_manifest_pixelated = _styles_manifest_pixelated,
         character_manifest = _character_manifest,
+        level_manifest = _level_manifest,
         gui_manifest = _gui_manifest,
-        level_config_class = LevelConfig,
-        level_session_class = LevelSession,
         colors_manifest = \
             Utils.get_direct_color_properties(GameDefaultColors.new()),
         annotation_parameters_manifest = Sc.utils.merge(
@@ -298,6 +401,25 @@ var _additive_overrides := {
                 GameDefaultAnnotationParameters.new()),
             Utils.get_direct_non_color_properties(
                 GameDefaultColors.new())),
+        camera_manifest = {
+            default_camera_class = NavigationPreselectionCamera,
+            snaps_camera_back_to_character = true,
+#            default_camera_class = SwipeCamera,
+#            snaps_camera_back_to_character = false,
+        },
+        slow_motion_manifest = {
+            default_time_scale = 0.5,
+            gui_mode_time_scale = 0.07,
+            tick_tock_tempo_multiplier = 1,
+            saturation = 0.3,
+        },
+        annotators_class = GameAnnotators,
+    },
+    SurfacerSchema: {
+        movement_manifest = {
+            do_player_actions_interrupt_navigation = true,
+        },
+        cancel_active_player_control_on_invalid_nav_selection = true,
     },
     SurfaceTilerSchema: {
         includes_intra_subtile_45_concave_cusps = false,
@@ -314,7 +436,7 @@ var _additive_overrides := {
                             "res://assets/images/tiles/tileset_quadrants.png",
                         tile_corner_type_annotations_path = \
                             "res://assets/images/tiles/tileset_corner_type_annotations.png",
-                        subtile_collision_margin = 0.0,
+                        subtile_collision_margin = 3.0,
                         are_45_degree_subtiles_used = true,
                         are_27_degree_subtiles_used = false,
                         properties = "default",
@@ -341,8 +463,50 @@ var _subtractive_overrides := {
             ],
             character_categories = [
                 # ScaffolderSchema._SQUIRREL_CATEGORY,
-            ]
-        }
+            ],
+        },
+        gui_manifest = {
+            welcome_panel_manifest = {
+                items = [
+                    SurfacerSchema.WELCOME_PANEL_ITEM_AUTO_NAV,
+                    ScaffolderSchema.WELCOME_PANEL_ITEM_MOVE,
+                    ScaffolderSchema.WELCOME_PANEL_ITEM_JUMP,
+                ],
+            },
+            settings_item_manifest = {
+                groups = {
+                    main = {
+                        item_classes = [
+#                            MusicControlRow,
+#                            SoundEffectsControlRow,
+#                            HapticFeedbackControlRow,
+                        ],
+                    },
+                    annotations = {
+                        item_classes = [
+#                            RulerAnnotatorControlRow,
+#                            RecentMovementAnnotatorControlRow,
+#                            CharacterAnnotatorControlRow,
+#                            LevelAnnotatorControlRow,
+                        ],
+                    },
+                    hud = {
+                        item_classes = [
+#                            DebugPanelControlRow,
+                        ],
+                    },
+                    miscellaneous = {
+                        item_classes = [
+#                            ButtonControlsControlRow,
+                            WelcomePanelControlRow,
+#                            CameraZoomControlRow,
+#                            TimeScaleControlRow,
+#                            MetronomeControlRow,
+                        ],
+                    },
+                },
+            }
+        },
     },
     SurfaceTilerSchema: {
         tilesets = [

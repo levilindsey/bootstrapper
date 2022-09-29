@@ -884,6 +884,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/gui/widgets/full_screen_panel.gd"
 }, {
+"base": "SurfacerAnnotators",
+"class": "GameAnnotators",
+"language": "GDScript",
+"path": "res://src/gui/game_annotators.gd"
+}, {
 "base": "Reference",
 "class": "GameDefaultAnnotationParameters",
 "language": "GDScript",
@@ -978,6 +983,11 @@ _global_script_classes=[ {
 "class": "HsvRangeColorConfig",
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/config/color_config/hsv_range_color_config.gd"
+}, {
+"base": "SurfacerHud",
+"class": "Hud",
+"language": "GDScript",
+"path": "res://src/gui/hud.gd"
 }, {
 "base": "HudKeyValueBox",
 "class": "HudCustomValueBox",
@@ -1138,6 +1148,11 @@ _global_script_classes=[ {
 "class": "LabeledControlList",
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/gui/control_row_list/control_row_list.gd"
+}, {
+"base": "Screen",
+"class": "LdLoadingScreen",
+"language": "GDScript",
+"path": "res://src/gui/ld_loading_screen.gd"
 }, {
 "base": "SurfacesOfSideGroupItemController",
 "class": "LeftWallsItemController",
@@ -2925,6 +2940,7 @@ _global_script_class_icons={
 "FromAirCalculator": "",
 "FromAirEdge": "",
 "FullScreenPanel": "res://addons/scaffolder/assets/images/editor_icons/full_screen_panel.png",
+"GameAnnotators": "",
 "GameDefaultAnnotationParameters": "",
 "GameDefaultColors": "",
 "GameInterface": "",
@@ -2944,6 +2960,7 @@ _global_script_class_icons={
 "HighScoreControlRow": "",
 "HorizontalMovementUtils": "",
 "HsvRangeColorConfig": "",
+"Hud": "",
 "HudCustomValueBox": "",
 "HudKeyValueBox": "",
 "HudKeyValueItemControlRow": "",
@@ -2976,6 +2993,7 @@ _global_script_class_icons={
 "JumpLandPositionsUtils": "",
 "KinematicCollision2DCopy": "",
 "LabeledControlList": "res://addons/scaffolder/assets/images/editor_icons/control_row_list.png",
+"LdLoadingScreen": "",
 "LeftWallsItemController": "",
 "Legend": "",
 "LegendItem": "",
@@ -3302,7 +3320,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Bootstrapper"
+config/name="Ludum Dare 51"
 run/main_scene="res://src/global/main.tscn"
 boot_splash/image="res://addons/scaffolder/assets/images/logos/godot_logo_splash.png"
 boot_splash/bg_color=Color( 0.12549, 0.145098, 0.192157, 1 )

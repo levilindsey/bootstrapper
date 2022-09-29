@@ -19,6 +19,8 @@ var level_manifest := {
             "test_character",
         ],
         cell_size = Vector2(32.0, 32.0),
+        # FIXME: -------------------
+#        music = "main_music",
     },
 #    "1": {
 #        name = "Foo",

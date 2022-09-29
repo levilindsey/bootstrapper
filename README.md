@@ -1,8 +1,8 @@
-# Ludum Dare 50
+# Ludum Dare 51
 
 > TODO: Add a cover image.
 
-> _**[Play the game!](https://levi.dev/ludum-dare-50)**_
+> _**[Play the game!](https://levi.dev/ludum-dare-51)**_
 
 _TODO: Game plot description / call-to-action_
 
@@ -31,7 +31,7 @@ I worked solo and created everything during the event. Except of course for my S
 -   **[Piskel](https://www.piskelapp.com/user/5663844106502144):** Pixel-art image editor.
 -   **[Aseprite](https://www.aseprite.org/):** Pixel-art image editor.
 -   **[Bfxr](https://www.bfxr.net/):** Sound effects editor.
--   **[DefleMask](https://deflemask.com/):** Chiptune music tracker.
+-   **[FamiStudio](https://famistudio.org/):** Chiptune music tracker.
 -   **[Surfacer](https://godotengine.org/asset-library/asset/968):** Framework for procedural path-finding across 2D platforms.
 -   **[Scaffolder](https://godotengine.org/asset-library/asset/969):** Framework for general app and UI infrastructure.
 -   **[SurfaceTiler](https://github.com/SnoringCatGames/surface_tiler):** Framework for "next-level" autotiling.
