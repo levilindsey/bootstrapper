@@ -99,7 +99,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/camera/camera_detector/camera_detector.gd"
 }, {
-"base": "Reference",
+"base": "Node2D",
 "class": "CameraShake",
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/camera/camera_shake.gd"
@@ -1004,7 +1004,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/gui/control_rows/settings/hud_key_value_item_control_row.gd"
 }, {
-"base": "VBoxContainer",
+"base": "ScaffolderPanelContainer",
 "class": "HudKeyValueList",
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/gui/hud/hud_key_value_list.gd"
@@ -1169,11 +1169,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/gui/legend_item.gd"
 }, {
-"base": "SurfacerLevel",
-"class": "Level",
-"language": "GDScript",
-"path": "res://src/config/level.gd"
-}, {
 "base": "SquirrelAwayLevel",
 "class": "Level8",
 "language": "GDScript",
@@ -1264,7 +1259,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/scaffolder/src/gui/control_rows/displays/longest_time_control_row.gd"
 }, {
-"base": "Node",
+"base": "Reference",
 "class": "Main",
 "language": "GDScript",
 "path": "res://src/global/main.gd"
@@ -2997,7 +2992,6 @@ _global_script_class_icons={
 "LeftWallsItemController": "",
 "Legend": "",
 "LegendItem": "",
-"Level": "",
 "Level8": "",
 "LevelAnnotatorControlRow": "",
 "LevelButton": "res://addons/scaffolder/assets/images/editor_icons/level_button.png",
@@ -3016,7 +3010,7 @@ _global_script_class_icons={
 "LoadingImage": "",
 "LockAnimation": "res://addons/scaffolder/assets/images/editor_icons/scaffolder_placeholder.png",
 "LongestTimeControlRow": "",
-"Main": "res://addons/scaffolder/assets/images/editor_icons/star.png",
+"Main": "",
 "MainMenuScreen": "",
 "MetronomeControlRow": "",
 "MoveBackAndForthBehavior": "res://addons/surfacer/assets/images/editor_icons/move_back_and_forth_behavior.png",

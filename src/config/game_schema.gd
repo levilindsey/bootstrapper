@@ -402,7 +402,8 @@ var _additive_overrides := {
             Utils.get_direct_non_color_properties(
                 GameDefaultColors.new())),
         camera_manifest = {
-            default_camera_class = NavigationPreselectionCamera,
+            default_camera_class = SwipeCamera,
+#            default_camera_class = NavigationPreselectionCamera,
             snaps_camera_back_to_character = true,
 #            default_camera_class = SwipeCamera,
 #            snaps_camera_back_to_character = false,
